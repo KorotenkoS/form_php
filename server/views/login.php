@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/public/style.css">
-    <script defer src="/public/main.js"></script>
-
-    <title>Document</title>
-</head>
-<body>
-    <main>
         <form class="auth" action="">
             <fieldset>
                 <legend>Autorization</legend>
@@ -29,16 +16,15 @@
                     <input class="auth__text" type="text" name="userPassword" id="userpass">
                 </div>
                 <label class="auth__check">
-                        Subscribe
+                    Subscribe
                     <input type="checkbox" id="usersubscribe">
                 </label>
-                
-                <div class="auth__row"><button class="auth__btn">Login</button>
+
+                <div class="auth__row">
+                    <button id="sendbtn" type="button" class="auth__btn">Login</button>
                 </div>
-                
+
 
             </fieldset>
         </form>
-    </main>
-</body>
-</html>
+        <script src="/public/login.js"></script>
