@@ -7,10 +7,10 @@ var userPass = document.querySelector('#userpass');
 
 
 var userEmail = document.querySelector('#useremail');
-var userEmailError = document.querySelector('#useremail + .auth_error_hide');
+var userEmailError = document.querySelector('#useremail + .auth__error');
 
 var userPhone = document.querySelector('#userphone');
-var userPhoneError = document.querySelector('#userphone + .auth_error_hide');
+var userPhoneError = document.querySelector('#userphone + .auth__error');
 
 var userSubscribe = document.querySelector('#usersubscribe');
 
