@@ -93,3 +93,11 @@ li {
     background: darkgreen;
     border-radius: 50%;
 }
+
+.auth_error_hide {
+    display: none;
+}
+
+.auth_error_show {
+    display: block;
+}
