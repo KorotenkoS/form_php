@@ -54,6 +54,7 @@ formManager.send = function() {
         name: this.Name.value,
         pasword: this.Password.value,
         email: this.Email.value,
+        phone: this.Phone.value,
         subscribe: this.Subscribe.checked,
     };
 
