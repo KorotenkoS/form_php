@@ -11,6 +11,9 @@ if ($method === 'POST') {
                 'result' => true,
                 'message' => 'registration successful, go to login',
             ];
+            $request['age'] = 25;
+            
+            addUser($request);
 
             echo json_encode($responce);
         } else {
@@ -23,3 +26,4 @@ if ($method === 'POST') {
         }
     }
 }
+

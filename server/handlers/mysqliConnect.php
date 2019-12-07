@@ -1,15 +1,46 @@
 <?php
 
-$link = mysqli_connect("127.0.0.1", "root", "password", "website");
+function getUsers() {
+    $DB = mysqli_connect("127.0.0.1", "root", "password", "website");
 
-if (!$link) {
-    die("пипец ничего не работает");
+    if (!$DB) {
+        die("пипец ничего не работает");
+    }
+
+    $dataUsers = $DB->query('SELECT username, age, email from users');
+
+    $users = $dataUsers->fetch_all(MYSQLI_ASSOC);
+
+    mysqli_close($DB);
+
+    return $users;
 }
 
-$users = $link->query('SELECT * FROM users WHERE  age > 50');
+function addUser($data) {
+    $DB = mysqli_connect("127.0.0.1", "root", "password", "website");
 
-var_dump($users);
+    if (!$DB) {
+        die("пипец ничего не работает");
+    }
+    $sql = "INSERT INTO users (username, email, `pasword`, phone, age) ";
 
-mysqli_close($link);
+    $sql .= "VALUES('{$data['name']}', '{$data['email']}', '{$data['pasword']}', '{$data['phone']}', '{$data['age']}')";
 
+    $resultQuery = $DB->query($sql);
 
+    var_dump($resultQuery);
+
+    mysqli_close($DB);
+
+    return $resultQuery;
+}
+
+//$user = [
+//"username" => 'vasa-1',
+// "email" => 'vasa-1@gmail.com',
+// "pasword" => '6674654564',
+// "phone" => '+380658994450',
+// "age" => 25,
+//];
+
+// addUser($user);
