@@ -58,9 +58,13 @@ formManager.send = function() {
         subscribe: this.Subscribe.checked,
     };
 
-    fetch('/login', {
+    fetch('/registration', {
         method: 'POST',
         body: JSON.stringify(data)
+    }).then(function(response){
+        return response.json()
+    }).then(function(data){
+        alert(data.message);
     });
 };
 

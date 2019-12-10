@@ -7,7 +7,7 @@ function getUsers() {
         die("пипец ничего не работает");
     }
 
-    $dataUsers = $DB->query('SELECT username, age, email from users');
+    $dataUsers = $DB->query('SELECT username, id, email, phone from users');
 
     $users = $dataUsers->fetch_all(MYSQLI_ASSOC);
 
@@ -28,7 +28,6 @@ function addUser($data) {
 
     $resultQuery = $DB->query($sql);
 
-    var_dump($resultQuery);
 
     mysqli_close($DB);
 
@@ -39,7 +38,7 @@ function addUser($data) {
 //"username" => 'vasa-1',
 // "email" => 'vasa-1@gmail.com',
 // "pasword" => '6674654564',
-// "phone" => '+380658994450',
+// "phone" => '+380658994450',`
 // "age" => 25,
 //];
 

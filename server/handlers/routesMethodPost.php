@@ -1,21 +1,30 @@
 <?php
 
 if ($method === 'POST') {
-    if ($route === '/login') {
+    if ($route === '/registration') {
         $request = json_decode(file_get_contents('php://input'), true);
 
         $isValid = valid($request);
 
         if ($isValid) {
-            $responce = [
+            $responceSuccess = [
                 'result' => true,
                 'message' => 'registration successful, go to login',
             ];
+            $responceFail = [
+                'result' => FALSE,
+                'message' => 'U vas LEVIE DANNIE',
+            ];
             $request['age'] = 25;
-            
-            addUser($request);
 
-            echo json_encode($responce);
+            $isSave = addUser($request);
+
+            if ($isSave) {
+                echo json_encode($responceSuccess);
+            } else {
+                echo json_encode($responceFail);
+            }
+
         } else {
             $responce = [
                 'result' => false,
