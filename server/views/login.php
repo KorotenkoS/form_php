@@ -1,4 +1,4 @@
-<form class="auth" action="">
+<form class="auth" action="/login" method="post">
     <fieldset>
         <legend>Autorization</legend>
         <div class="auth__row">

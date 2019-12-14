@@ -16,6 +16,22 @@ function getUsers() {
     return $users;
 }
 
+function getUser($email) {
+    $DB = mysqli_connect("127.0.0.1", "root", "password", "website");
+
+    if (!$DB) {
+        die("пипец ничего не работает");
+    }
+
+    $dataUser = $DB->query("SELECT username, id, email, phone from users WHERE email='{$email}'");
+
+    $user = $dataUser->fetch(MYSQLI_ASSOC);
+
+    mysqli_close($DB);
+
+    return $user;
+}
+
 function addUser($data) {
     $DB = mysqli_connect("127.0.0.1", "root", "password", "website");
 

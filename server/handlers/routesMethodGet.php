@@ -2,6 +2,23 @@
 
 if ($method === 'GET') {
 
+       
+    if (empty($_SESSION['routes'])) {
+        $_SESSION['routes'] = [];
+    }
+
+    if(empty($_SESSION['routes'][$route])){
+        $_SESSION['routes'][$route] = 1;
+    } else {
+        $_SESSION['routes'][$route]++;
+    }
+
+    $routes_str = '';
+
+    foreach ($_SESSION['routes'] as $k => $kvalue) {
+        $routes_str .= "{$k} = {$kvalue}, ";
+    }
+        
     include './views/header.php';
 
     if ($route === '/') {
@@ -18,9 +35,12 @@ if ($method === 'GET') {
     }
     if ($route === '/users') {
         $users = getUsers();
-        
+
         include './views/users.php';
     }
 
     include './views/footer.php';
+    
+    
 }
+
