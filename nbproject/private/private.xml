@@ -3,20 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/contacts.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/handlers/mysqli.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/home.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/footer.php</file>
             <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/login.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/registration.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/handlers/routesMethodPost.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/users.php</file>
+            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/handlers/mysqli.php</file>
             <file>file:/home/serhii/NewProjectSkillUp/form_php/server/views/header.php</file>
             <file>file:/home/serhii/NewProjectSkillUp/form_php/server/handlers/routesMethodGet.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/handlers/validate.php</file>
             <file>file:/home/serhii/NewProjectSkillUp/form_php/server/index.php</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/public/registration.js</file>
-            <file>file:/home/serhii/NewProjectSkillUp/form_php/server/public/style.css</file>
         </group>
     </open-files>
 </project-private>

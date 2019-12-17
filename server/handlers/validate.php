@@ -12,7 +12,7 @@ function valid($data) {
     if (!preg_match('/^\+[1-9]{1}[0-9]{3,14}$/', $data['phone'])) {
         $errors['phone'] = 'phone is not valid';
     }
-    if (!preg_match('/^[a-zа-я0-9\-_\.\ ]{2,25}$/i', $data['pasword'])) {
+    if (!preg_match('/^[a-zа-я0-9\-_\.\ ]{2,25}$/i', $data['password'])) {
         $errors['pasword'] = 'pasword is not valid';
     }
     if (!(gettype($data['subscribe']) === 'boolean')) {

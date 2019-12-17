@@ -23,9 +23,9 @@ function getUser($email) {
         die("пипец ничего не работает");
     }
 
-    $dataUser = $DB->query("SELECT username, id, email, phone from users WHERE email='{$email}'");
+    $dataUser = $DB->query("SELECT username, id, email, phone, password from users WHERE email='{$email}'");
 
-    $user = $dataUser->fetch(MYSQLI_ASSOC);
+    $user = $dataUser->fetch_all(MYSQLI_ASSOC);
 
     mysqli_close($DB);
 
@@ -38,9 +38,9 @@ function addUser($data) {
     if (!$DB) {
         die("пипец ничего не работает");
     }
-    $sql = "INSERT INTO users (username, email, `pasword`, phone, age) ";
+    $sql = "INSERT INTO users (username, email, `password`, phone, age) ";
 
-    $sql .= "VALUES('{$data['name']}', '{$data['email']}', '{$data['pasword']}', '{$data['phone']}', '{$data['age']}')";
+    $sql .= "VALUES('{$data['name']}', '{$data['email']}', '{$data['password']}', '{$data['phone']}', '{$data['age']}')";
 
     $resultQuery = $DB->query($sql);
 

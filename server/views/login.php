@@ -1,6 +1,9 @@
 <form class="auth" action="/login" method="post">
     <fieldset>
         <legend>Autorization</legend>
+        
+        <p style="color:red; text-align:center;"><?= $error ? $error : '' ?></p>
+        
         <div class="auth__row">
             <label for="useremail">User email</label>
             <input value="Vasiliy@gmail.com" class="auth__text" type="text" name="email" id="useremail">
